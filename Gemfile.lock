@@ -37,8 +37,8 @@ GIT
 
 GIT
   remote: https://github.com/CocoaPods/Xcodeproj.git
-  revision: 3adafadf3ff7dee3369401bb48c42f7447c2eff6
-  branch: master
+  revision: bfe0a6d8082f7adb59d662272b6943af37d20976
+  branch: segiddins/scheme-format
   specs:
     xcodeproj (1.19.0)
       CFPropertyList (>= 2.3.3, < 4.0)
