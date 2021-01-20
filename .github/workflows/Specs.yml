@@ -31,11 +31,14 @@ jobs:
 
       - name: Update git submodules
         run: git submodule update --init
+      
+      - name: Set env variable
+        run: echo "ImageVersion=$ImageVersion"  >> $GITHUB_ENV
 
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
-          key: gems@v1-${{ matrix.os }}-Ruby${{ matrix.ruby }}-${{ hashFiles('Gemfile.lock') }}-$env.ImageVersion
+          key: gems@v1-${{ matrix.os }}-Ruby${{ matrix.ruby }}-${{ hashFiles('Gemfile.lock') }}-$ImageVersion
           restore-keys: |
             gems@v1-${{ matrix.os }}-Ruby${{ matrix.ruby }}-
       - name: Run bundle install
