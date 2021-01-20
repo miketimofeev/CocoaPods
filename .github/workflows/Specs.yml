@@ -20,7 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkout git
+      - name: Checkout git1
         uses: actions/checkout@v1
 
       - name: Set up Ruby
